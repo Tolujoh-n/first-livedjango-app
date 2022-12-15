@@ -1,4 +1,4 @@
 function myfuction() {
-    alert('Great one')
+    alert("Great one");
 }
 

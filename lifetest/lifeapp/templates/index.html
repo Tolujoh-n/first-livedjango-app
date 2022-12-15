@@ -1,10 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Liveapp</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
 </head>
 <body>
     <h1>God is good</h1>
@@ -19,6 +23,26 @@
         <li>holland is a very nice guy</li>
     </ul>
 
-    <a>Testing junks is the most important thing</a>
+
+
+    <a href="#">Testing junks is the most important thing</a>
+    <hr>
+    
+    <h2>Firstname list</h2>
+    {% for x in johnlist %}
+    <ul>
+        <li>{{ x.firstname }}</li>
+    </ul>
+    {% endfor %}
+
+    <hr>
+    <h2>Lasttname list</h2>
+    {% for x in johnlist %}
+    <ul>
+        <li>{{ x.lastname }}</li>
+    </ul>
+    {% endfor %}
+        
+    <button onclick="myfuction()">Click Me!</button>
 </body>
 </html>
